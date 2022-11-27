@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encuesta mision admisión</title>
+    <link rel="stylesheet" href="encuestaCss.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Poppins&display=swap" rel="stylesheet">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<!--
+    <nav class="navbar d-flex justify-content-center">
+        <div class="contenedor">
+        <a class="navbar-brand " style="color: white" href="#">
+            <img src="https://misionadmision-informacion.s3.us-west-2.amazonaws.com/medallero/cursos/maLogo.jpg"  width="100px" id="imgNav" class="" alt="">
+            Experiencia de compra en misión admisión
+        </a>
+        </div>
+    </nav>-->
+
+<div class="contenedor" style="">
+    <section id="section1">
+        <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"/>
+        <br>
+        <h2 style="color: white">
+            <strong>¡Hola!</strong>
+        </h2>
+        <br>
+        <h3 style="color: white;">Nos gustaría saber tu opinion</h3>
+        <br>
+        <h4 style="color: white;">¿Puedes responder nuestra breve encuesta?</h4>
+        <img src="https://misionadmision-informacion.s3.us-west-2.amazonaws.com/backgrounds/ilustraciones/ilustracion2.png" width="600px"/>
+        <a class=" btn btn-primary btn-lg" style="background-color: #ff6167ff !important; border:none" href="#section2">!Vamos!</a>
+
+    </section>
+
+
+    <form>
+        <section id="section2">
+
+
+            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"/>
+            <br>
+
+            <label style="font-size: 2em;color: white" class=""> Tu hijo está por ingresar a:</label><br>
+            <div class="radiobtn">
+                <input type="radio" id="universidad" name="ingreso" style="display: inline-flex" required="true">
+                <label for="universidad">Universidad</label>
+            </div>
+            <div class="radiobtn">
+                <input type="radio" id="bachiller" name="ingreso" style="display: inline-flex" required="true">
+                <label for="bachiller">Bachillerato</label>
+            </div>
+
+
+            <img src="https://misionadmision-informacion.s3.us-west-2.amazonaws.com/backgrounds/ilustraciones/ilustracion3.png" width="600px"/>
+            <a class=" btn btn-primary btn-lg" style="background-color: #ff6167ff !important; border:none"
+               href="#section3">Siguiente</a>
+
+
+        </section>
+
+        <section id="section3" class="">
+            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"/>
+            <br>
+            <br>
+                <h3 style="color: white; text-align: center;" >¿A qué Universidad desea ingresar?</h3>
+                <br>
+                <select name="" id="universidades" class="selectItem">
+                    <option value="" selected>Ninguna</option>
+                    <option value="Benemérita Escuela Normal Veracruzana">Benemérita Escuela Normal Veracruzana</option>
+                    <option value="Escuela Normal SUperior">Escuela Normal SUperior</option>
+                    <option value="Universidad Veracruzana">Universidad Veracruzana</option>
+                    <option value="Universidad Pedagógica Nacional">Universidad Pedagógica Nacional</option>
+                    <option value="Instituto Tecnico Superior">Instituto Tecnico Superior</option>
+                    <option value="Universidad Pedagógica Veracruzana">Universidad Pedagógica Veracruzana</option>
+                    <option value="Universidad de Xalapa">Universidad de Xalapa</option>
+                    <option value="Universidad Naval">Universidad Naval</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                <br>
+                <br>
+
+                <h5 style="color: white"> ¿Tu hijo ya está inscrito en algún curso propedéutico de ingreso a la Universidad o Bachillerato?</h5>
+                <br>
+
+                <div class="radiobtn">
+                    <input type="radio" id="si-prope-uni" name="propes" >
+                    <label for="si-prope-uni"  style="min-width: 446px;"> Si</label>
+                </div>
+                <div class="radiobtn">
+                    <input type="radio" id="no-prope-uni" name="propes" style="display: inline-flex">
+                    <label for="no-prope-uni" style="min-width: 446px;"> No</label>
+                </div>
+            <br>
+            <br>
+                <a class=" btn btn-primary btn-lg" style="background-color: #ff6167ff !important; border:none"
+                   href="#section4">Siguiente</a>
+
+
+
+
+        </section>
+
+
+        <section id="section4">
+            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"/>
+            <br>
+            <br>
+            <h3 style="color: white; text-align: center;" >¿A qué Bachillerato desea ingresar?</h3>
+            <br>
+            <div class="radiobtn">
+                <input type="radio" id="publico" name="bachilleres" style="display: inline-flex">
+                <label for="publico"   >Público DBG</label>
+            </div>
+            <div class="radiobtn">
+                <input type="radio" id="privado" name="bachilleres" style="display: inline-flex">
+                <label for="privado">Privado</label>
+            </div>
+            <br>
+            <br>
+
+            <h5 style="color: white"> ¿Tu hijo ya está inscrito en algún curso propedéutico de ingreso a la Universidad o Bachillerato?</h5>
+            <br>
+
+            <div class="radiobtn">
+                <input type="radio" id="si" name="propes" style="display: inline-flex">
+                <label for="si" >Si</label>
+            </div>
+            <div class="radiobtn">
+                <input type="radio" id="no" name="propes" style="display: inline-flex">
+                <label for="no" >No</label>
+            </div>
+            <br>
+            <br>
+            <a class=" btn btn-primary btn-lg" style="background-color: #ff6167ff !important; border:none"
+               href="#section6">Siguiente</a>
+        </section>
+
+        <section id="section5">
+            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"/>
+            <br>
+            <br>
+        <h5 style="color: white">¿Has considerado la posibilidad de que tu hijo se capacite para el examen de ingreso a Universidad o Bachillerato?</h5>
+        <br>
+            <div class="radiobtn">
+                <input type="radio" id="si-considerado" name="considerado" style="display: inline-flex">
+                <label for="si-considerado" >Si</label>
+            </div>
+            <br>
+            <div class="radiobtn">
+                <input type="radio" id="no-considerado" name="considerado" style="display: inline-flex">
+                <label for="no-considerado" >No</label>
+            </div>
+            <br>
+            <div class="radiobtn">
+                <input type="radio" id="talvez" name="considerado" style="display: inline-flex">
+                <label for="talvez" >talvez</label>
+            </div>
+        </section>
+
+        <section id="section6">
+            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"/>
+            <br>
+            <br>
+            <h5>¿Qué cosas te motivaron para buscar un curso de capacitación para tu hijo?</h5>
+            <br>
+            <textarea rows="3" cols="20" placeholder="Escribe tu respuesta" ></textarea>
+            <br>
+            <br>
+
+            <h5>¿En qué mes empezaste a considerar la posibilidad de que tu hijo se capacite para el examen de admisión a la Universidad o Bachillerato?</h5>
+            <br>
+            <select name="" id="meses">
+                <option value="">Selecciona un mes</option>
+                <option value="Enero">Enero</option>
+                <option value="Febrero">Febrero</option>
+                <option value="Marzo">Marzo</option>
+                <option value="Abril" >Abril</option>
+                <option value="Mayo">Mayo</option>
+                <option value="Junio">Junio</option>
+                <option value="Julio">Julio</option>
+                <option value="Agosto">Agosto</option>
+                <option value="Septiembre">Septiembre</option>
+                <option value="Octubre">Octubre</option>
+                <option value="Noviembre">Noviembre</option>
+                <option value="Diciembre">Diciembre</option>
+            </select>
+
+
+
+            <img src="https://misionadmision-informacion.s3.us-west-2.amazonaws.com/backgrounds/ilustraciones/ilustracion4.png" width="400px"/>
+
+            <a class=" btn btn-primary btn-lg" style="background-color: #ff6167ff !important; border:none"
+               href="#section7">Siguiente</a>
+        </section>
+
+        <section id="section7" >
+            <br>
+            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png" style="margin-top: 250px"/>
+            <br>
+            <h5>¿Qué redes sociales usas con MAYOR frecuencia?</h5>
+            <br>
+            <h4>Uso siempre</h4>
+            <br>
+            <div class="radio-buttons">
+                <label class="custom-radio">
+                    <input type="radio" name="radio"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-facebook"></i>
+              <h3>Facebook</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-instagram"></i>
+              <h3>Instagram</h3>
+            </div>
+          </span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+                <i class="fa-brands fa-tiktok"></i>
+              <h3>TikTok</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-youtube"></i>
+              <h3>Youtube</h3>
+            </div>
+          </span>
+                </label>
+
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-whatsapp"></i>
+              <h3>whatsapp</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-discord"></i>
+              <h3>Discord</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+             <i class="fa-brands fa-twitch"></i>
+              <h3>Twitch</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="las la-ellipsis-h"></i>
+              <h3>Otra</h3>
+            </div>
+          </span>
+                </label>
+
+            </div>
+            <br>
+            <h4>También uso con frecuencia</h4>
+            <br>
+            <div class="radio-buttons">
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-facebook"></i>
+              <h3>Facebook</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio"name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-instagram"></i>
+              <h3>Instagram</h3>
+            </div>
+          </span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+                <i class="fa-brands fa-tiktok"></i>
+              <h3>TikTok</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-youtube"></i>
+              <h3>Youtube</h3>
+            </div>
+          </span>
+                </label>
+
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-whatsapp"></i>
+              <h3>whatsapp</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-discord"></i>
+              <h3>Discord</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+             <i class="fa-brands fa-twitch"></i>
+              <h3>Twitch</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="las la-ellipsis-h"></i>
+              <h3>Otra</h3>
+            </div>
+          </span>
+                </label>
+
+            </div>
+            <br>
+            <h4>A veces uso:</h4>
+            <br>
+            <div class="radio-buttons">
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-facebook"></i>
+              <h3>Facebook</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio"name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-instagram"></i>
+              <h3>Instagram</h3>
+            </div>
+          </span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+                <i class="fa-brands fa-tiktok"></i>
+              <h3>TikTok</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-youtube"></i>
+              <h3>Youtube</h3>
+            </div>
+          </span>
+                </label>
+
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-whatsapp"></i>
+              <h3>whatsapp</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-discord"></i>
+              <h3>Discord</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+             <i class="fa-brands fa-twitch"></i>
+              <h3>Twitch</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="las la-ellipsis-h"></i>
+              <h3>Otra</h3>
+            </div>
+          </span>
+                </label>
+
+            </div>
+            <br>
+            <h4>Nunca uso:</h4>
+            <br>
+            <div class="radio-buttons">
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-facebook"></i>
+              <h3>Facebook</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio"name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-instagram"></i>
+              <h3>Instagram</h3>
+            </div>
+          </span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+                <i class="fa-brands fa-tiktok"></i>
+              <h3>TikTok</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-youtube"></i>
+              <h3>Youtube</h3>
+            </div>
+          </span>
+                </label>
+
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-whatsapp"></i>
+              <h3>whatsapp</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-discord"></i>
+              <h3>Discord</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+             <i class="fa-brands fa-twitch"></i>
+              <h3>Twitch</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio2" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="las la-ellipsis-h"></i>
+              <h3>Otra</h3>
+            </div>
+          </span>
+                </label>
+
+            </div>
+
+            <a class=" btn btn-primary btn-lg" style="background-color: #ff6167ff !important; border:none; margin-bottom: 30px"
+               href="#section8">Siguiente</a>
+
+
+        </section>
+
+
+        <section id="section8" >
+            <br>
+            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png" style="margin-top: 250px"/>
+            <br>
+            <h5>¿Qué medios utilizas para buscar productos o contratar servicios? </h5>
+            <br>
+            <h4>Siempre busco en</h4>
+            <br>
+            <div class="radio-buttons">
+                <label class="custom-radio">
+                    <input type="radio" name="radio"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-facebook"></i>
+              <h3>Anuncios en Facebook</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-instagram"></i>
+              <h3>Anuncios en Instagram</h3>
+            </div>
+          </span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+               <i class="fa-solid fa-thumbs-up"></i>
+              <h3>Recomendación</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-google"></i>
+              <h3>Anuncios en Google</h3>
+            </div>
+          </span>
+                </label>
+
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-radio"></i>
+              <h3>Anuncios en la radio</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-newspaper"></i>
+              <h3>Anuncios en periódicos o revistas</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+             <i class="fa-solid fa-rectangle-ad"></i>
+              <h3>Anuncios en vallas publicitarias</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="las la-ellipsis-h"></i>
+              <h3>Otro</h3>
+            </div>
+          </span>
+                </label>
+
+            </div>
+            <br>
+            <h4>Casi siempre busco en</h4>
+            <br>
+            <div class="radio-buttons">
+                <label class="custom-radio">
+                    <input type="radio" name="radio"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-facebook"></i>
+              <h3>Anuncios en Facebook</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-instagram"></i>
+              <h3>Anuncios en Instagram</h3>
+            </div>
+          </span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+               <i class="fa-solid fa-thumbs-up"></i>
+              <h3>Recomendación</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-google"></i>
+              <h3>Anuncios en Google</h3>
+            </div>
+          </span>
+                </label>
+
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-radio"></i>
+              <h3>Anuncios en la radio</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-newspaper"></i>
+              <h3>Anuncios en periódicos o revistas</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+             <i class="fa-solid fa-rectangle-ad"></i>
+              <h3>Anuncios en vallas publicitarias</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="las la-ellipsis-h"></i>
+              <h3>Otro</h3>
+            </div>
+          </span>
+                </label>
+
+            </div>
+            <br>
+            <h4>A veces busco en:</h4>
+            <br>
+            <div class="radio-buttons">
+                <label class="custom-radio">
+                    <input type="radio" name="radio"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-facebook"></i>
+              <h3>Anuncios en Facebook</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-instagram"></i>
+              <h3>Anuncios en Instagram</h3>
+            </div>
+          </span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+               <i class="fa-solid fa-thumbs-up"></i>
+              <h3>Recomendación</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-google"></i>
+              <h3>Anuncions en Google</h3>
+            </div>
+          </span>
+                </label>
+
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-radio"></i>
+              <h3>Anuncions en la radio</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-newspaper"></i>
+              <h3>Anuncios en periódicos o revistas</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+             <i class="fa-solid fa-rectangle-ad"></i>
+              <h3>Anuncios en vallas publicitarias</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="las la-ellipsis-h"></i>
+              <h3>Otro</h3>
+            </div>
+          </span>
+                </label>
+
+            </div>
+            <br>
+            <h4>Nunca busco en:</h4>
+            <br>
+            <div class="radio-buttons">
+                <label class="custom-radio">
+                    <input type="radio" name="radio"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-facebook"></i>
+              <h3>Anuncios en Facebook</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-instagram"></i>
+              <h3>Anuncios en Instagram</h3>
+            </div>
+          </span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+               <i class="fa-solid fa-thumbs-up"></i>
+              <h3>Recomendación</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-brands fa-google"></i>
+              <h3>Anuncios en Google</h3>
+            </div>
+          </span>
+                </label>
+
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-radio"></i>
+              <h3>Anuncios en la radio</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-newspaper"></i>
+              <h3>Anuncios en periódicos o revistas</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+             <i class="fa-solid fa-rectangle-ad"></i>
+              <h3>Anuncios en vallas publicitarias</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="radio" />
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="las la-ellipsis-h"></i>
+              <h3>Otro</h3>
+            </div>
+          </span>
+                </label>
+
+            </div>
+
+            <a class=" btn btn-primary btn-lg" style="background-color: #ff6167ff !important; border:none; margin-bottom: 30px"
+               href="#section7">Siguiente</a>
+
+
+        </section>
+
+        <section id="section9" ></section>
+
+    </form>
+</div>
+
+</body>
+
+</html>
