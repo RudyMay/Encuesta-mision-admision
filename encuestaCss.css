@@ -27,9 +27,8 @@ section{
     scroll-snap-align: start;
 }
 
-#section7,#section8,#section9,#section10{
+#section7,#section8,#section9,#section10,#section11,#section12{
     overflow-y: scroll;
-    overflox-x: hidden;
 }
 
 
@@ -273,10 +272,19 @@ input[type="checkbox"]:checked+label div{ background:#D092F9; }
 
     textarea{
         min-width: 280px;
+        min-height: 100px;
     }
 
-.logoMa{
-    margin-top: 2000px !important;
+#logoMa2{
+    margin-top: 2400px !important;
+}
+
+#logoMa1{
+    margin-top: 2500px !important;
+}
+
+#logoMa3{
+    margin-top: 3000px !important;
 }
 
     .checkboxes label p {
