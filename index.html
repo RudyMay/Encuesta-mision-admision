@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Encuesta mision admisión</title>
     <link rel="stylesheet" href="encuestaCss.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -23,23 +23,27 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+          href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script>var submitted = false;</script>
     <script>
-        function scrolling(idsection,idsection2){
+        function scrolling(idsection, idsection2) {
             var sectionTarget = document.getElementById(idsection)
-            var contador=0;
+            var contador = 0;
 
-            if(sectionTarget.getElementsByTagName('input').length>0){
-                for(let i=0; i<sectionTarget.getElementsByTagName('input').length;i++){
-                    if(sectionTarget.getElementsByTagName('input')[i].checked){
+            if (sectionTarget.getElementsByTagName('input').length > 0) {
+                for (let i = 0; i < sectionTarget.getElementsByTagName('input').length; i++) {
+                    if (sectionTarget.getElementsByTagName('input')[i].checked) {
                         contador++
                     }
 
                 }
-                if(contador<4){
-                    alert("no puede haber elementos vacios")
-                }else{
+                if (contador < 4) {
+                    alert("Contesta todas las preguntas antes de continuar")
+                } else {
                     document.getElementById(idsection2).scrollIntoView()
                 }
 
@@ -47,21 +51,21 @@
 
         }
 
-        function EsUniversidadOBachiller(){
-            var contador=0;
-            for(let i=0; i<document.getElementById('section2').getElementsByTagName('input').length;i++){
-                if(document.getElementById('section2').getElementsByTagName('input')[i].checked){
+        function EsUniversidadOBachiller() {
+            var contador = 0;
+            for (let i = 0; i < document.getElementById('section2').getElementsByTagName('input').length; i++) {
+                if (document.getElementById('section2').getElementsByTagName('input')[i].checked) {
                     contador++
                 }
             }
-            if(contador<1){
+            if (contador < 1) {
                 alert("debes elegir una de las opciones")
-            }else{
-                for(let i=0; i<document.getElementById('section2').getElementsByTagName('input').length;i++){
-                    if(document.getElementById('section2').getElementsByTagName('input')[i].checked){
-                        if(document.getElementById('section2').getElementsByTagName('input')[i].value=="Universidad"){
+            } else {
+                for (let i = 0; i < document.getElementById('section2').getElementsByTagName('input').length; i++) {
+                    if (document.getElementById('section2').getElementsByTagName('input')[i].checked) {
+                        if (document.getElementById('section2').getElementsByTagName('input')[i].value == "Universidad") {
                             document.getElementById('section3').scrollIntoView()
-                        }else{
+                        } else {
                             document.getElementById('section4').scrollIntoView()
                         }
 
@@ -69,38 +73,37 @@
                 }
 
 
-
             }
         }
 
 
-        function EsUniversidad(){
-            var contador=0;
+        function EsUniversidad() {
+            var contador = 0;
 
-            var uni=document.getElementById('universidades');
-           if(uni.options[uni.selectedIndex].value==""){
-               alert("debes elegir una universidad")
-           }else{
+            var uni = document.getElementById('universidades');
+            if (uni.options[uni.selectedIndex].value == "") {
+                alert("debes elegir una universidad")
+            } else {
 
-           }
+            }
 
-            for(let i=0; i<document.getElementById('section3').getElementsByTagName('input').length;i++){
-                if(document.getElementById('section3').getElementsByTagName('input')[i].checked){
+            for (let i = 0; i < document.getElementById('section3').getElementsByTagName('input').length; i++) {
+                if (document.getElementById('section3').getElementsByTagName('input')[i].checked) {
                     contador++
                 }
             }
-            if(contador<1){
+            if (contador < 1) {
                 alert("debes elegir una de las opciones")
-            }else{
-                for(let i=0; i<document.getElementById('section3').getElementsByTagName('input').length;i++){
-                    if(document.getElementById('section3').getElementsByTagName('input')[i].checked){
-                        if(document.getElementById('section3').getElementsByTagName('input')[i].value=="Si"){
-                            if(uni.options[uni.selectedIndex].value!=""){
+            } else {
+                for (let i = 0; i < document.getElementById('section3').getElementsByTagName('input').length; i++) {
+                    if (document.getElementById('section3').getElementsByTagName('input')[i].checked) {
+                        if (document.getElementById('section3').getElementsByTagName('input')[i].value == "Si") {
+                            if (uni.options[uni.selectedIndex].value != "") {
                                 document.getElementById('section6').scrollIntoView()
                             }
 
-                        }else{
-                            if(uni.options[uni.selectedIndex].value!=""){
+                        } else {
+                            if (uni.options[uni.selectedIndex].value != "") {
                                 document.getElementById('section5').scrollIntoView()
                             }
 
@@ -110,27 +113,26 @@
                 }
 
 
-
             }
         }
 
 
-        function EsBachiller(){
-            var contador=0;
+        function EsBachiller() {
+            var contador = 0;
 
-            for(let i=0; i<document.getElementById('section4').getElementsByTagName('input').length;i++){
-                if(document.getElementById('section4').getElementsByTagName('input')[i].checked){
+            for (let i = 0; i < document.getElementById('section4').getElementsByTagName('input').length; i++) {
+                if (document.getElementById('section4').getElementsByTagName('input')[i].checked) {
                     contador++
                 }
             }
-            if(contador<2){
+            if (contador < 2) {
                 alert("Contesta todas las preguntas antes de continuar")
-            }else{
-                for(let i=0; i<document.getElementById('section4').getElementsByTagName('input').length;i++){
-                    if(document.getElementById('section4').getElementsByTagName('input')[i].checked){
-                        if(document.getElementById('section4').getElementsByTagName('input')[i].value=="Si"){
+            } else {
+                for (let i = 0; i < document.getElementById('section4').getElementsByTagName('input').length; i++) {
+                    if (document.getElementById('section4').getElementsByTagName('input')[i].checked) {
+                        if (document.getElementById('section4').getElementsByTagName('input')[i].value == "Si") {
                             document.getElementById('section6').scrollIntoView()
-                        }else{
+                        } else {
                             document.getElementById('section5').scrollIntoView()
                         }
 
@@ -138,26 +140,56 @@
                 }
 
 
-
             }
         }
 
 
-
-
-        function IrSeccion2(){
+        function IrSeccion2() {
             document.getElementById('section2').scrollIntoView()
         }
 
-        function IrSeccion7(){
+        function IrSeccion7() {
 
-            if(document.getElementById('motivaciones').value!=""&&document.getElementById('meses').value!=""){
+            if (document.getElementById('motivaciones').value != "" && document.getElementById('meses').value != "") {
                 document.getElementById('section7').scrollIntoView()
-            }else{
-                 alert("Contesta todas las preguntas antes de continuar")
+            } else {
+                alert("Contesta todas las preguntas antes de continuar")
             }
         }
 
+        function IrSeccion6() {
+            var cont = 0;
+            for (let i = 0; i < document.getElementById('section5').getElementsByTagName('input').length; i++) {
+                if (document.getElementById('section5').getElementsByTagName('input')[i].checked) {
+                    cont++
+                }
+
+            }
+            if (cont < 1) {
+                alert("Responde las preguntas antes de continuar")
+            } else {
+                document.getElementById('section6').scrollIntoView()
+            }
+        }
+
+        function IrSeccion10() {
+            let cont = 0
+
+
+            for (let i = 0; i < document.getElementById('section9').getElementsByTagName('input').length; i++) {
+                if (document.getElementById('section9').getElementsByTagName('input')[i].checked) {
+                    cont++
+                }
+
+
+            }
+            if(cont<2){
+                alert("Responde todas las preguntas antes de continuar")
+            }else{
+                document.getElementById('section10').scrollIntoView()
+            }
+
+        }
 
     </script>
 
@@ -172,7 +204,9 @@
         </a>
         </div>
     </nav>-->
-
+<iframe name="hiddenConfirm" id="hiddenConfirm" style="display: none" onload="if(submitted){window.location.replace('gracias.html'); document.querySelector('form').reset();}"></iframe>
+<form action="https://script.google.com/macros/s/AKfycbwgurWg-mvogCyxL0xgNygAxZLfp9jP7k123ydLWQ3x5tPCzZpKVeP8LnC0CuxKRUKiUQ/exec"
+      method="post" id="encuesta" onsubmit="submitted=true;enviar.disabled=true;">
 <div class="contenedor" style="">
     <section id="section1">
         <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"/>
@@ -184,31 +218,37 @@
         <h3 style="color: white;">Nos gustaría saber tu opinion</h3>
         <br>
         <h4 style="color: white;">¿Puedes responder nuestra breve encuesta?</h4>
-        <img class="figura" src="https://misionadmision-informacion.s3.us-west-2.amazonaws.com/backgrounds/ilustraciones/ilustracion2.png" width="600px"/>
-        <a class=" btn btn-primary btn-lg" style="background-color: #ff6167ff !important; border:none" href="javascript:IrSeccion2()">¡Vamos!</a>
+        <img class="figura"
+             src="https://misionadmision-informacion.s3.us-west-2.amazonaws.com/backgrounds/ilustraciones/ilustracion2.png"
+             width="600px"/>
+        <a class=" btn btn-primary btn-lg" style="background-color: #ff6167ff !important; border:none"
+           href="javascript:IrSeccion2()">¡Vamos!</a>
 
     </section>
 
 
-    <form>
-        <section id="section2">
 
+        <section id="section2">
 
             <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"/>
             <br>
 
             <h4 style="font-size: 2em;color: white" class=""> Tu hijo está por ingresar a:</h4><br>
             <div class="radiobtn">
-                <input type="radio" id="universidad" name="ingreso" style="display: inline-flex" value="Universidad">
+                <input type="radio" id="universidad" name="Tu hijo está por ingresar a" style="display: inline-flex"
+                       value="Universidad" required="true">
                 <label for="universidad">Universidad</label>
             </div>
             <div class="radiobtn">
-                <input type="radio" id="bachiller" name="ingreso" style="display: inline-flex" value="Bachillerato">
+                <input type="radio" id="bachiller" name="Tu hijo está por ingresar a" style="display: inline-flex"
+                       value="Bachillerato"  required="true">
                 <label for="bachiller">Bachillerato</label>
             </div>
 
 
-            <img class="figura" src="https://misionadmision-informacion.s3.us-west-2.amazonaws.com/backgrounds/ilustraciones/ilustracion3.png" width="600px"/>
+            <img class="figura"
+                 src="https://misionadmision-informacion.s3.us-west-2.amazonaws.com/backgrounds/ilustraciones/ilustracion3.png"
+                 width="600px"/>
             <a class=" btn btn-primary btn-lg" style="background-color: #ff6167ff !important; border:none"
                href="javascript:EsUniversidadOBachiller()">Siguiente</a>
 
@@ -219,40 +259,41 @@
             <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"/>
             <br>
             <br>
-                <h4 style="color: white; text-align: center;" id="universidadIngresar" >¿A qué Universidad desea ingresar?</h4>
-                <br>
-                <select name="" id="universidades" class="selectItem">
-                    <option value="" selected>Ninguna</option>
-                    <option value="Benemérita Escuela Normal Veracruzana">Benemérita Escuela Normal Veracruzana</option>
-                    <option value="Escuela Normal SUperior">Escuela Normal SUperior</option>
-                    <option value="Universidad Veracruzana">Universidad Veracruzana</option>
-                    <option value="Universidad Pedagógica Nacional">Universidad Pedagógica Nacional</option>
-                    <option value="Instituto Tecnico Superior">Instituto Tecnico Superior</option>
-                    <option value="Universidad Pedagógica Veracruzana">Universidad Pedagógica Veracruzana</option>
-                    <option value="Universidad de Xalapa">Universidad de Xalapa</option>
-                    <option value="Universidad Naval">Universidad Naval</option>
-                    <option value="Otro">Otro</option>
-                </select>
-                <br>
-                <br>
+            <h4 style="color: white; text-align: center;" id="universidadIngresar">¿A qué Universidad desea
+                ingresar?</h4>
+            <br>
 
-                <h4 style="color: white"> ¿Tu hijo ya está inscrito en algún curso propedéutico de ingreso a la Universidad o Bachillerato?</h4>
-                <br>
-
-                <div class="radiobtn">
-                    <input type="radio" id="si-prope-uni" name="propes" value="Si"  >
-                    <label for="si-prope-uni"  style="min-width: 446px;"> Si</label>
-                </div>
-                <div class="radiobtn">
-                    <input type="radio" id="no-prope-uni" name="propes" style="display: inline-flex">
-                    <label for="no-prope-uni" style="min-width: 446px;" value="No"> No</label>
-                </div>
+            <select type="text" name="¿A qué Universidad desea ingresar?" id="universidades" class="selectItem" >
+                <option value="" selected>Ninguna</option>
+                <option value="Benemérita Escuela Normal Veracruzana">Benemérita Escuela Normal Veracruzana</option>
+                <option value="Escuela Normal SUperior">Escuela Normal Superior</option>
+                <option value="Universidad Veracruzana">Universidad Veracruzana</option>
+                <option value="Universidad Pedagógica Nacional">Universidad Pedagógica Nacional</option>
+                <option value="Instituto Tecnico Superior">Instituto Tecnico Superior</option>
+                <option value="Universidad Pedagógica Veracruzana">Universidad Pedagógica Veracruzana</option>
+                <option value="Universidad de Xalapa">Universidad de Xalapa</option>
+                <option value="Universidad Naval">Universidad Naval</option>
+                <option value="Otro">Otro</option>
+            </select>
             <br>
             <br>
-                <a class=" btn btn-primary btn-lg" style="background-color: #ff6167ff !important; border:none"
-                   href="javascript:EsUniversidad()">Siguiente</a>
 
+            <h4 style="color: white"> ¿Tu hijo ya está inscrito en algún curso propedéutico de ingreso a la Universidad
+                o Bachillerato?</h4>
+            <br>
 
+            <div class="radiobtn">
+                <input type="radio" id="si-prope-uni" name="¿Tu hijo ya está inscrito en algún curso propedéutico de ingreso a la Universidad o Bachillerato?" value="Si">
+                <label for="si-prope-uni" style="min-width: 446px;"> Sí</label>
+            </div>
+            <div class="radiobtn">
+                <input type="radio" id="no-prope-uni" name="¿Tu hijo ya está inscrito en algún curso propedéutico de ingreso a la Universidad o Bachillerato?" style="display: inline-flex" value="No">
+                <label for="no-prope-uni" style="min-width: 446px;" > No</label>
+            </div>
+            <br>
+            <br>
+            <a class=" btn btn-primary btn-lg" style="background-color: #ff6167ff !important; border:none"
+               href="javascript:EsUniversidad()">Siguiente</a>
 
 
         </section>
@@ -262,29 +303,31 @@
             <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"/>
             <br>
             <br>
-            <h4 style="color: white; text-align: center;" >¿A qué Bachillerato desea ingresar?</h4>
+            <h4 style="color: white; text-align: center;">¿A qué Bachillerato desea ingresar?</h4>
             <br>
             <div class="radiobtn">
-                <input type="radio" id="publico" name="bachilleres" style="display: inline-flex" value="Publico DBG">
-                <label for="publico"   >Público DBG</label>
+                <input type="radio" id="publico" name="¿A qué Bachillerato desea ingresar?" style="display: inline-flex"
+                       value="Publico DBG">
+                <label for="publico">Público DBG</label>
             </div>
             <div class="radiobtn">
-                <input type="radio" id="privado" name="bachilleres" style="display: inline-flex" value="Privado">
+                <input type="radio" id="privado" name="¿A qué Bachillerato desea ingresar?" style="display: inline-flex" value="Privado" >
                 <label for="privado">Privado</label>
             </div>
             <br>
             <br>
 
-            <h4 style="color: white"> ¿Tu hijo ya está inscrito en algún curso propedéutico de ingreso a la Universidad o Bachillerato?</h4>
+            <h4 style="color: white"> ¿Tu hijo ya está inscrito en algún curso propedéutico de ingreso a la Universidad
+                o Bachillerato?</h4>
             <br>
 
             <div class="radiobtn">
-                <input type="radio" id="si" name="propes" style="display: inline-flex" value="Si" >
-                <label for="si" >Si</label>
+                <input type="radio" id="si" name="¿Tu hijo ya está inscrito en algún curso propedéutico de ingreso a la Universidad o Bachillerato?" style="display: inline-flex" value="Si"  >
+                <label for="si">Sí</label>
             </div>
             <div class="radiobtn">
-                <input type="radio" id="no" name="propes" style="display: inline-flex" value="No">
-                <label for="no" >No</label>
+                <input type="radio" id="no" name="¿Tu hijo ya está inscrito en algún curso propedéutico de ingreso a la Universidad o Bachillerato?" style="display: inline-flex" value="No" >
+                <label for="no">No</label>
             </div>
             <br>
             <br>
@@ -296,22 +339,27 @@
             <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"/>
             <br>
             <br>
-        <h4>¿Has considerado la posibilidad de que tu hijo se capacite para el examen de ingreso a Universidad o Bachillerato?</h4>
-        <br>
+            <h4>¿Has considerado la posibilidad de que tu hijo se capacite para el examen de ingreso a Universidad o
+                Bachillerato?</h4>
+            <br>
             <div class="radiobtn">
-                <input type="radio" id="si-considerado" name="considerado" style="display: inline-flex" value="Si">
-                <label for="si-considerado" >Si</label>
+                <input type="radio" id="si-considerado" name="¿Has considerado la posibilidad de que tu hijo se capacite para el examen de ingreso a Universidad o Bachillerato?" style="display: inline-flex" value="Si"  >
+                <label for="si-considerado">Sí</label>
             </div>
             <br>
             <div class="radiobtn">
-                <input type="radio" id="no-considerado" name="considerado" style="display: inline-flex" value="No">
-                <label for="no-considerado" >No</label>
+                <input type="radio" id="no-considerado" name="¿Has considerado la posibilidad de que tu hijo se capacite para el examen de ingreso a Universidad o Bachillerato?" style="display: inline-flex" value="No"  >
+                <label for="no-considerado">No</label>
             </div>
             <br>
             <div class="radiobtn">
-                <input type="radio" id="talvez" name="considerado" style="display: inline-flex" value="Tal vez">
-                <label for="talvez" >Tal vez</label>
+                <input type="radio" id="talvez" name="¿Has considerado la posibilidad de que tu hijo se capacite para el examen de ingreso a Universidad o Bachillerato?" style="display: inline-flex" value="Tal vez">
+                <label for="talvez">Tal vez</label>
             </div>
+
+            <a class=" btn btn-primary btn-lg" style="background-color: #ff6167ff !important; border:none"
+               href="javascript:IrSeccion6()">Siguiente</a>
+
         </section>
 
         <section id="section6">
@@ -320,18 +368,21 @@
             <br>
             <h4>¿Qué cosas te motivaron para buscar un curso de capacitación para tu hijo?</h4>
             <br>
-            <textarea rows="3" cols="20" placeholder="Escribe tu respuesta"  id="motivaciones"></textarea>
+            <textarea type="text" rows="3" cols="20" placeholder="Escribe tu respuesta" form="encuesta" name="¿Qué te motivó a buscar un curso de capacitación?"
+                      id="motivaciones"  required="true"></textarea>
             <br>
             <br>
 
-            <h4>¿En qué mes empezaste a considerar la posibilidad de que tu hijo se capacite para el examen de admisión a la Universidad o Bachillerato?</h4>
+            <label for="meses">¿En qué mes empezaste a considerar la posibilidad de que tu hijo se capacite para el
+                examen de admisión a la Universidad o Bachillerato?</label>
             <br>
-            <select name="" id="meses">
+            <select type="text" id="meses" name="En qué mes empezaste a considerar la posibilidad de que tu hijo se capacite para el
+                examen de admisión a la Universidad o Bachillerato?">
                 <option value="">Selecciona un mes</option>
                 <option value="Enero">Enero</option>
                 <option value="Febrero">Febrero</option>
                 <option value="Marzo">Marzo</option>
-                <option value="Abril" >Abril</option>
+                <option value="Abril">Abril</option>
                 <option value="Mayo">Mayo</option>
                 <option value="Junio">Junio</option>
                 <option value="Julio">Julio</option>
@@ -343,16 +394,17 @@
             </select>
 
 
-
-            <img src="https://misionadmision-informacion.s3.us-west-2.amazonaws.com/backgrounds/ilustraciones/ilustracion4.png" width="400px"/>
+            <img src="https://misionadmision-informacion.s3.us-west-2.amazonaws.com/backgrounds/ilustraciones/ilustracion4.png"
+                 width="400px"/>
 
             <a class=" btn btn-primary btn-lg" style="background-color: #ff6167ff !important; border:none"
                href=javascript:IrSeccion7()>Siguiente</a>
         </section>
 
-        <section id="section7" >
+        <section id="section7">
             <br>
-            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png" style="margin-top: 250px" class="logoMa"/>
+            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"
+                 style="margin-top: 250px" id="logoMa1"/>
             <br>
             <h4>¿Qué redes sociales usas con MAYOR frecuencia?</h4>
             <br>
@@ -360,7 +412,7 @@
             <br>
             <div class="radio-buttons">
                 <label class="custom-radio">
-                    <input type="radio" name="radio" value="Facebook" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [Uso siempre:]" value="Facebook"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -371,7 +423,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio"  value="Instagram"/>
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [Uso siempre:]" value="Instagram"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -381,7 +433,7 @@
           </span>
                 </label>
                 <label class="custom-radio">
-                    <input type="radio" name="radio" value="TikTok"/>
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [Uso siempre:]" value="TikTok"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -392,7 +444,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio" value="Youtube"/>
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [Uso siempre:]" value="Youtube"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -404,7 +456,7 @@
 
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio" value="Whatsapp" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [Uso siempre:]" value="Whatsapp"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -415,7 +467,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio" value="Discord" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [Uso siempre:]" value="Discord"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -426,7 +478,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio" value="Twitch" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [Uso siempre:]" value="Twitch"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -437,7 +489,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio" value="Otra" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [Uso siempre:]" value="Otra"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -453,7 +505,7 @@
             <br>
             <div class="radio-buttons">
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Facebook" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [También uso con frecuencia:]" value="Facebook"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -464,7 +516,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio"name="radio2" value="Instagram" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [También uso con frecuencia:]" value="Instagram"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -474,7 +526,7 @@
           </span>
                 </label>
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="TikTok" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [También uso con frecuencia:]" value="TikTok"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -485,7 +537,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Youtube" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [También uso con frecuencia:]" value="Youtube"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -497,7 +549,7 @@
 
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Whatsapp"/>
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [También uso con frecuencia:]" value="Whatsapp"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -508,7 +560,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Discord"/>
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [También uso con frecuencia:]" value="Discord"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -519,7 +571,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Twitch" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [También uso con frecuencia:]" value="Twitch"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -530,7 +582,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Otra" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [También uso con frecuencia:]" value="Otra"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -546,7 +598,7 @@
             <br>
             <div class="radio-buttons">
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Facebook" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [A veces uso:]" value="Facebook"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -557,7 +609,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio"name="radio2" value="Instagram" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [A veces uso:]" value="Instagram"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -567,7 +619,7 @@
           </span>
                 </label>
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Tiktok" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [A veces uso:]" value="Tiktok"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -578,7 +630,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Youtube" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [A veces uso:]" value="Youtube"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -590,7 +642,7 @@
 
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Whatsapp" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [A veces uso:]" value="Whatsapp"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -601,7 +653,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Discord"/>
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [A veces uso:]" value="Discord"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -612,7 +664,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Twitch" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [A veces uso:]" value="Twitch"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -623,7 +675,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Otra" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [A veces uso:]" value="Otra"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -639,7 +691,7 @@
             <br>
             <div class="radio-buttons">
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Facebook"/>
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [Nunca uso:]" value="Facebook"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -650,7 +702,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio"name="radio2" value="Instagram"/>
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [Nunca uso:]" value="Instagram"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -660,7 +712,7 @@
           </span>
                 </label>
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="TikTok"/>
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [Nunca uso:]" value="TikTok"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -671,7 +723,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Youtube"/>
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [Nunca uso:]" value="Youtube"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -683,7 +735,7 @@
 
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Whatsapp"/>
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [Nunca uso:]" value="Whatsapp"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -694,7 +746,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Discord"/>
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [Nunca uso:]" value="Discord"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -705,7 +757,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Twitch" />
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [Nunca uso:]" value="Twitch"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -716,7 +768,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio2" value="Otra"/>
+                    <input type="radio" name="¿Qué redes sociales usas con MAYOR frecuencia? [Nunca uso:]" value="Otra"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -728,16 +780,18 @@
 
             </div>
 
-            <a class=" btn btn-primary btn-lg" style="background-color: #ff6167ff !important; border:none; margin-bottom: 30px"
+            <a class=" btn btn-primary btn-lg"
+               style="background-color: #ff6167ff !important; border:none; margin-bottom: 30px"
                href="javascript:scrolling('section7','section8')">Siguiente</a>
 
 
         </section>
 
 
-        <section id="section8" >
+        <section id="section8">
             <br>
-            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png" style="margin-top: 250px" class="logoMa" />
+            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"
+                 style="margin-top: 250px" id="logoMa2"/>
             <br>
             <h4>¿Qué medios utilizas para buscar productos o contratar servicios? </h4>
             <br>
@@ -745,7 +799,7 @@
             <br>
             <div class="radio-buttons">
                 <label class="custom-radio">
-                    <input type="radio" name="radio" value="Anuncios en Facebook"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Siempre busco en:]" value="Anuncios en Facebook"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -756,7 +810,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio" value="Anuncios en Instagram"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Siempre busco en:]" value="Anuncios en Instagram"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -766,7 +820,7 @@
           </span>
                 </label>
                 <label class="custom-radio">
-                    <input type="radio" name="radio" value="Recomendación" />
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Siempre busco en:]" value="Recomendación"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -777,7 +831,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio" value="Anuncios en Google" />
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Siempre busco en:]" value="Anuncios en Google"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -789,7 +843,7 @@
 
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio" value="Anuncios en la radio" />
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Siempre busco en:]" value="Anuncios en la radio"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -800,7 +854,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio"  value="Anuncios en periódicos o revistas"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Siempre busco en:]" value="Anuncios en periódicos o revistas"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -811,7 +865,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio" value="Anuncios en vallas publicitarias" />
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Siempre busco en:]" value="Anuncios en vallas publicitarias"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -822,7 +876,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio" value="Otro"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Siempre busco en:]" value="Otro"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -838,7 +892,7 @@
             <br>
             <div class="radio-buttons">
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Anuncios en Facebook"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Casi siempre busco en:]" value="Anuncios en Facebook"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -849,7 +903,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Anuncios en Instagram"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Casi siempre busco en:]" value="Anuncios en Instagram"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -859,7 +913,7 @@
           </span>
                 </label>
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Recomendación" />
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Casi siempre busco en:]" value="Recomendación"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -870,7 +924,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Anuncios en Google"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Casi siempre busco en:]" value="Anuncios en Google"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -882,7 +936,7 @@
 
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Anuncios en la radio"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Casi siempre busco en:]" value="Anuncios en la radio"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -893,7 +947,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Anuncios en periódicos o revistas"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Casi siempre busco en:]" value="Anuncios en periódicos o revistas"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -904,7 +958,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Anuncios en vallas publicitarias" />
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Casi siempre busco en:]" value="Anuncios en vallas publicitarias"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -915,7 +969,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Otro" />
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Casi siempre busco en:]" value="Otro"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -931,7 +985,7 @@
             <br>
             <div class="radio-buttons">
                 <label class="custom-radio">
-                    <input type="radio" name="radio4" value="Anuncios en Facebook"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [A veces busco en:]" value="Anuncios en Facebook"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -942,7 +996,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio4" value="Anuncios en Instagram"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [A veces busco en:]" value="Anuncios en Instagram"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -952,7 +1006,7 @@
           </span>
                 </label>
                 <label class="custom-radio">
-                    <input type="radio" name="radio4" value="Recomendación" />
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [A veces busco en:]" value="Recomendación"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -963,7 +1017,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio4" value="Anuncios en Google" />
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [A veces busco en:]" value="Anuncios en Google"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -975,7 +1029,7 @@
 
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio4" value="Anuncios en la radio"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [A veces busco en:]" value="Anuncios en la radio"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -986,7 +1040,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio4" value="Anuncios en periódicos o revistas" />
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [A veces busco en:]" value="Anuncios en periódicos o revistas"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -997,7 +1051,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio4" value="Anuncios en vallas publicitarias"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [A veces busco en:]" value="Anuncios en vallas publicitarias"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1008,7 +1062,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio4" value="Otro" />
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [A veces busco en:]" value="Otro"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1024,7 +1078,7 @@
             <br>
             <div class="radio-buttons">
                 <label class="custom-radio">
-                    <input type="radio" name="radio5" value="Anuncios en Facebook"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Nunca busco en:]" value="Anuncios en Facebook"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1035,7 +1089,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio5" value="Anuncios en Instagram"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Nunca busco en:]" value="Anuncios en Instagram"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1045,7 +1099,7 @@
           </span>
                 </label>
                 <label class="custom-radio">
-                    <input type="radio" name="radio5" value="Recomendación"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Nunca busco en:]" value="Recomendación"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1056,7 +1110,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio5" value="Anuncios en Google" />
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Nunca busco en:]" value="Anuncios en Google"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1068,7 +1122,7 @@
 
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio5" value="Anuncios en la radio" />
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Nunca busco en:]" value="Anuncios en la radio"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1079,7 +1133,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio5"  value="Anuncios en periódicos o revistas"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Nunca busco en:]" value="Anuncios en periódicos o revistas"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1090,7 +1144,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio5" value="Anuncios en vallas publicitarias"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Nunca busco en:]" value="Anuncios en vallas publicitarias"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1101,7 +1155,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio5" value="Otro"/>
+                    <input type="radio" name="¿Qué medios utilizas para buscar productos o contratar servicios?  [Nunca busco en:]" value="Otro"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1113,80 +1167,102 @@
 
             </div>
 
-            <a class=" btn btn-primary btn-lg" style="background-color: #ff6167ff !important; border:none; margin-bottom: 30px"
+            <a class=" btn btn-primary btn-lg"
+               style="background-color: #ff6167ff !important; border:none; margin-bottom: 30px"
                href="javascript:scrolling('section8','section9')">Siguiente</a>
 
 
         </section>
 
-        <section id="section9" >
-            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png" style="margin-top: 250px" />
+        <section id="section9">
+            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"
+                 style="margin-top: 250px"/>
             <br>
             <h4>¿Qué modalidad de capacitación prefieres para tu hijo?</h4>
             <div class="radiobtn">
-                <input type="radio" id="presencial" name="capacitacion" style="display: inline-flex" value="Capacitación presencial">
+                <input type="radio" id="presencial" name="¿Qué modalidad de capacitación prefieres para tu hijo?" style="display: inline-flex"
+                       value="Capacitación presencial">
                 <label for="presencial" id="labelPresencial">Capacitación presencial</label>
             </div>
             <div class="radiobtn">
-                <input type="radio" id="live" name="capacitacion" style="display: inline-flex" value="Capacitación en línea con clases en vivo">
+                <input type="radio" id="live" name="¿Qué modalidad de capacitación prefieres para tu hijo?" style="display: inline-flex"
+                       value="Capacitación en línea con clases en vivo">
                 <label for="live" id="labelLive">Capacitación en línea con clases en vivo</label>
             </div>
             <h4>
-                En tu búsqueda de cursos propedéuticos de capacitación, ¿qué  información te gustaría recibir durante tu proceso de compra? <br><br>Selecciona las opciones que sean más importantes para ti.
+                En tu búsqueda de cursos propedéuticos de capacitación, ¿qué información te gustaría recibir durante tu
+                proceso de compra? <br><br>Selecciona las opciones que sean más importantes para ti.
             </h4>
             <br>
             <div class="checkboxes">
-             <div>
-                <input type="checkbox" id="check1" value="Costo"/>
-                <label for="check1">
-                    <div><i class="fa fa-check"> </i></div> <p>Costo</p>
-                </label>
-            </div>
-
-            <div>
-                <input type="checkbox" id="check2" value="Fechas y horarios de las clases"/>
-                <label for="check2">
-                    <div><i class="fa fa-check"></i></div> <p>Fechas y horarios de las clases</p>
-                </label>
-            </div>
-
-            <div>
-                <input type="checkbox" id="check3" value="Contenido del temario a estudiar"/>
-                <label for="check3">
-                    <div><i class="fa fa-check"></i></div> <p>Contenido del temario a estudiar</p>
-                </label>
-            </div>
                 <div>
-                    <input type="checkbox" id="check4" value="Datos de las fechas del examen"/>
+                    <input type="checkbox" id="check1" value="Costo" name="En tu búsqueda de cursos propedéuticos de capacitación, ¿qué  información te gustaría recibir durante tu proceso de compra? Selecciona las opciones que sean más importantes para ti.[Opcion 1]"/>
+                    <label for="check1">
+                        <div><i class="fa fa-check"> </i></div>
+                        <p>Costo</p>
+                    </label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="check2" value="Fechas y horarios de las clases" name="En tu búsqueda de cursos propedéuticos de capacitación, ¿qué  información te gustaría recibir durante tu proceso de compra? Selecciona las opciones que sean más importantes para ti.[Opcion 2]"/>
+                    <label for="check2">
+                        <div><i class="fa fa-check"></i></div>
+                        <p>Fechas y horarios de las clases</p>
+                    </label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="check3" value="Contenido del temario a estudiar"
+                           name="En tu búsqueda de cursos propedéuticos de capacitación, ¿qué  información te gustaría recibir durante tu proceso de compra? Selecciona las opciones que sean más importantes para ti.[Opcion 3]"/>
+                    <label for="check3">
+                        <div><i class="fa fa-check"></i></div>
+                        <p>Contenido del temario a estudiar</p>
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="check4" value="Datos de las fechas del examen" name="En tu búsqueda de cursos propedéuticos de capacitación, ¿qué  información te gustaría recibir durante tu proceso de compra? Selecciona las opciones que sean más importantes para ti.[Opcion 4]"/>
                     <label for="check4">
-                        <div><i class="fa fa-check"></i></div> <p>Datos de las fechas del examen</p>
+                        <div><i class="fa fa-check"></i></div>
+                        <p>Datos de las fechas del examen</p>
                     </label>
                 </div>
                 <div>
-                    <input type="checkbox" id="check5" value="Ubicación del centro de capacitación"/>
+                    <input type="checkbox" id="check5" value="Ubicación del centro de capacitación"
+                           name="En tu búsqueda de cursos propedéuticos de capacitación, ¿qué  información te gustaría recibir durante tu proceso de compra? Selecciona las opciones que sean más importantes para ti.[Opcion 5]"/>
                     <label for="check5">
-                        <div><i class="fa fa-check"></i></div> <p>Ubicación del centro de capacitación</p>
+                        <div><i class="fa fa-check"></i></div>
+                        <p>Ubicación del centro de capacitación</p>
                     </label>
                 </div>
                 <div>
-                    <input type="checkbox" id="check6" value="Información sobre facilidades de pago<"/>
+                    <input type="checkbox" id="check6" value="Información sobre facilidades de pago<"
+                           name="En tu búsqueda de cursos propedéuticos de capacitación, ¿qué  información te gustaría recibir durante tu proceso de compra? Selecciona las opciones que sean más importantes para ti.[Opcion 5]"/>
                     <label for="check6">
-                        <div><i class="fa fa-check"></i></div> <p>Información sobre facilidades de pago</p>
+                        <div><i class="fa fa-check"></i></div>
+                        <p>Información sobre facilidades de pago</p>
                     </label>
                 </div>
 
-        </div>
+            </div>
+
+            <a class=" btn btn-primary btn-lg"
+               style="background-color: #ff6167ff !important; border:none; margin-bottom: 30px"
+               href="javascript:IrSeccion10()">Siguiente</a>
 
 
         </section>
         <section id="section10">
-            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png" style="margin-top: 250px" class="logoMa"/>
+            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"
+                 style="margin-top: 250px" id="logoMa3"/>
             <br>
-            <h4>En tu opinión, ¿cuáles de las siguientes características hacen <strong>ATRACTIVO</strong> a un curso propedéutico? Selecciona las <strong>CUATRO</strong> principales que afectarían POSITIVAMENTE en tu elección.</h4>
+            <h4>En tu opinión, ¿cuáles de las siguientes características hacen <strong>ATRACTIVO</strong> a un curso
+                propedéutico? Selecciona las <strong>CUATRO</strong> principales que
+                afectarían<strong> POSITIVAMENTE</strong>en tu elección.</h4>
             <br>
+            <h4>Primera opción</h4>
             <div class="radio-buttons">
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="La cercanía del campus a mi hogar"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Primera opción]" value="La cercanía del campus a mi hogar"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1197,7 +1273,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="El estado de las instalaciones"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Primera opción]" value="El estado de las instalaciones"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1207,7 +1283,7 @@
           </span>
                 </label>
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="El precio del curso" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Primera opción]" value="El precio del curso"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1218,7 +1294,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Si tienen material impreso o no"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Primera opción]" value="Si tienen material impreso o no"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1230,7 +1306,7 @@
 
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Facilidades de pago"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Primera opción]" value="Facilidades de pago"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1241,7 +1317,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="La preparación de los maestros"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Primera opción]" value="La preparación de los maestros"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1252,7 +1328,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Recomendación" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Primera opción]" value="Recomendación"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1263,7 +1339,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Si usan una plataforma educativa" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Primera opción]" value="Si usan una plataforma educativa"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1274,7 +1350,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="El modelo de estudios" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Primera opción]" value="El modelo de estudios"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1285,7 +1361,8 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="El tiempo que mi hijo tiene que invertir estudiando" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Primera opción]"
+                           value="El tiempo que mi hijo tiene que invertir estudiando"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1297,11 +1374,11 @@
 
             </div>
             <br>
-            <h4>Segunda Opción</h4>
+            <h4>Segunda opción</h4>
             <br>
             <div class="radio-buttons">
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="La cercanía del campus a mi hogar"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Segunda opción]" value="La cercanía del campus a mi hogar"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1312,7 +1389,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="El estado de las instalaciones"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Segunda opción]" value="El estado de las instalaciones"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1322,7 +1399,7 @@
           </span>
                 </label>
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="El precio del curso" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Segunda opción]" value="El precio del curso"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1333,7 +1410,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Si tienen material impreso o no"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Segunda opción]" value="Si tienen material impreso o no"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1345,7 +1422,7 @@
 
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Facilidades de pago"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Segunda opción]" value="Facilidades de pago"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1356,7 +1433,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="La preparación de los maestros"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Segunda opción]" value="La preparación de los maestros"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1367,7 +1444,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Recomendación" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Segunda opción]" value="Recomendación"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1378,7 +1455,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Si usan una plataforma educativa" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Segunda opción]" value="Si usan una plataforma educativa"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1389,7 +1466,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="El modelo de estudios" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Segunda opción]" value="El modelo de estudios"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1400,7 +1477,8 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="El tiempo que mi hijo tiene que invertir estudiando" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Segunda opción]"
+                           value="El tiempo que mi hijo tiene que invertir estudiando"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1412,11 +1490,11 @@
 
             </div>
             <br>
-            <h4>Tercera Opcioón</h4>
+            <h4>Tercera opción</h4>
             <br>
             <div class="radio-buttons">
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="La cercanía del campus a mi hogar"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Tercera opción]" value="La cercanía del campus a mi hogar"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1427,7 +1505,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="El estado de las instalaciones"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Tercera opción]" value="El estado de las instalaciones"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1437,7 +1515,7 @@
           </span>
                 </label>
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="El precio del curso" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Tercera opción]" value="El precio del curso"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1448,7 +1526,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Si tienen material impreso o no"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Tercera opción]" value="Si tienen material impreso o no"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1460,7 +1538,7 @@
 
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Facilidades de pago"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Tercera opción]" value="Facilidades de pago"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1471,7 +1549,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="La preparación de los maestros"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Tercera opción]" value="La preparación de los maestros"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1482,7 +1560,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Recomendación" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Tercera opción]" value="Recomendación"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1493,7 +1571,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Si usan una plataforma educativa" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Tercera opción]" value="Si usan una plataforma educativa"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1504,7 +1582,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="El modelo de estudios" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Tercera opción]" value="El modelo de estudios"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1515,7 +1593,8 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="El tiempo que mi hijo tiene que invertir estudiando" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Tercera opción]"
+                           value="El tiempo que mi hijo tiene que invertir estudiando"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1531,7 +1610,7 @@
             <br>
             <div class="radio-buttons">
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="La cercanía del campus a mi hogar"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Cuarta opción]" value="La cercanía del campus a mi hogar"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1542,7 +1621,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="El estado de las instalaciones"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Cuarta opción]" value="El estado de las instalaciones"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1552,7 +1631,7 @@
           </span>
                 </label>
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="El precio del curso" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Cuarta opción]" value="El precio del curso"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1563,7 +1642,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Si tienen material impreso o no"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Cuarta opción]" value="Si tienen material impreso o no"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1575,7 +1654,7 @@
 
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Facilidades de pago"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Cuarta opción]" value="Facilidades de pago"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1586,7 +1665,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="La preparación de los maestros"/>
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Cuarta opción]" value="La preparación de los maestros"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1597,7 +1676,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Recomendación" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Cuarta opción]" value="Recomendación"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1608,7 +1687,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="Si usan una plataforma educativa" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Cuarta opción]" value="Si usan una plataforma educativa"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1619,7 +1698,7 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="El modelo de estudios" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Cuarta opción]" value="El modelo de estudios"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1630,7 +1709,8 @@
                 </label>
 
                 <label class="custom-radio">
-                    <input type="radio" name="radio3" value="El tiempo que mi hijo tiene que invertir estudiando" />
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían POSITIVAMENTE en tu elección. [Cuarta opción]"
+                           value="El tiempo que mi hijo tiene que invertir estudiando"/>
                     <span class="radio-btn"
                     >
             <div class="hobbies-icon">
@@ -1641,12 +1721,621 @@
                 </label>
 
             </div>
+
+
+            <a class=" btn btn-primary btn-lg"
+               style="background-color: #ff6167ff !important; border:none; margin-bottom: 30px"
+               href="javascript:scrolling('section10','section11')">Siguiente</a>
         </section>
 
-    </form>
+        <section id="section11">
+            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"
+                 style="margin-top: 250px" id="logoMa3"/>
+            <br>
+            <h4>En tu opinión, ¿cuáles de las siguientes características hacen <strong>MENOS ATRACTIVO</strong> a un
+                curso propedéutico? Selecciona las <strong>CUATRO</strong> principales que afectarían <strong>NEGATIVAMENTE</strong>
+                en tu elección.</h4>
+            <br>
+            <h4>Primera opción</h4>
+            <div class="radio-buttons">
+                <label class="custom-radio">
+                    <input type="radio" name="radio3" value="La cercanía del campus a mi hogar"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-sharp fa-solid fa-house"></i>
+              <h3>La cercanía del campus a mi hogar</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Primera opción]" value="El estado de las instalaciones"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-building"></i>
+              <h3>El estado de las instalaciones</h3>
+            </div>
+          </span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Primera opción]" value="El precio del curso"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-dollar-sign"></i>
+              <h3>El precio del curso</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Primera opción]" value="Si tienen material impreso o no"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-regular fa-book"></i>
+              <h3>Si tienen material impreso o no</h3>
+            </div>
+          </span>
+                </label>
+
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Primera opción]" value="Facilidades de pago"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-credit-card"></i>
+              <h3>Facilidades de pago</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Primera opción]" value="La preparación de los maestros"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-chalkboard-user"></i>
+              <h3>La preparación de los maestros</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Primera opción]" value="Recomendación"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+            <i class="fa-solid fa-thumbs-up"></i>
+              <h3>Recomendación</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Primera opción]" value="Si usan una plataforma educativa"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-laptop"></i>
+              <h3>Si usan una plataforma educativa</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Primera opción]" value="El modelo de estudios"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              <h3>El modelo de estudios</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Primera opción]"
+                           value="El tiempo que mi hijo tiene que invertir estudiando"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-clock" id="iconTiempo"></i>
+              <h3>El tiempo que mi hijo tiene que invertir estudiando</h3>
+            </div>
+          </span>
+                </label>
+
+            </div>
+            <br>
+            <h4>Segunda opción</h4>
+            <br>
+            <div class="radio-buttons">
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Segunda opción]" value="La cercanía del campus a mi hogar"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-sharp fa-solid fa-house"></i>
+              <h3>La cercanía del campus a mi hogar</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Segunda opción]" value="El estado de las instalaciones"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-building"></i>
+              <h3>El estado de las instalaciones</h3>
+            </div>
+          </span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Segunda opción]" value="El precio del curso"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-dollar-sign"></i>
+              <h3>El precio del curso</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Segunda opción]" value="Si tienen material impreso o no"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-regular fa-book"></i>
+              <h3>Si tienen material impreso o no</h3>
+            </div>
+          </span>
+                </label>
+
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Segunda opción]" value="Facilidades de pago"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-credit-card"></i>
+              <h3>Facilidades de pago</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Segunda opción]" value="La preparación de los maestros"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-chalkboard-user"></i>
+              <h3>La preparación de los maestros</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Segunda opción]" value="Recomendación"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+            <i class="fa-solid fa-thumbs-up"></i>
+              <h3>Recomendación</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Segunda opción]" value="Si usan una plataforma educativa"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-laptop"></i>
+              <h3>Si usan una plataforma educativa</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Segunda opción]" value="El modelo de estudios"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              <h3>El modelo de estudios</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Segunda opción]"
+                           value="El tiempo que mi hijo tiene que invertir estudiando"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-clock" id="iconTiempo"></i>
+              <h3>El tiempo que mi hijo tiene que invertir estudiando</h3>
+            </div>
+          </span>
+                </label>
+
+            </div>
+            <br>
+            <h4>Tercera opción</h4>
+            <br>
+            <div class="radio-buttons">
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Tercera opción]" value="La cercanía del campus a mi hogar"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-sharp fa-solid fa-house"></i>
+              <h3>La cercanía del campus a mi hogar</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Tercera opción]" value="El estado de las instalaciones"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-building"></i>
+              <h3>El estado de las instalaciones</h3>
+            </div>
+          </span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Tercera opción]" value="El precio del curso"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-dollar-sign"></i>
+              <h3>El precio del curso</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Tercera opción]" value="Si tienen material impreso o no"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-regular fa-book"></i>
+              <h3>Si tienen material impreso o no</h3>
+            </div>
+          </span>
+                </label>
+
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Tercera opción]" value="Facilidades de pago"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-credit-card"></i>
+              <h3>Facilidades de pago</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Tercera opción]" value="La preparación de los maestros"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-chalkboard-user"></i>
+              <h3>La preparación de los maestros</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Tercera opción]" value="Recomendación"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+            <i class="fa-solid fa-thumbs-up"></i>
+              <h3>Recomendación</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Tercera opción]" value="Si usan una plataforma educativa"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-laptop"></i>
+              <h3>Si usan una plataforma educativa</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Tercera opción]" value="El modelo de estudios"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              <h3>El modelo de estudios</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Tercera opción]"
+                           value="El tiempo que mi hijo tiene que invertir estudiando"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-clock" id="iconTiempo"></i>
+              <h3>El tiempo que mi hijo tiene que invertir estudiando</h3>
+            </div>
+          </span>
+                </label>
+
+            </div>
+            <br>
+            <h4>Cuarta opción</h4>
+            <br>
+            <div class="radio-buttons">
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Cuarta opción]" value="La cercanía del campus a mi hogar"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-sharp fa-solid fa-house"></i>
+              <h3>La cercanía del campus a mi hogar</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Cuarta opción]" value="El estado de las instalaciones"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-building"></i>
+              <h3>El estado de las instalaciones</h3>
+            </div>
+          </span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Cuarta opción]" value="El precio del curso"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-dollar-sign"></i>
+              <h3>El precio del curso</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Cuarta opción]" value="Si tienen material impreso o no"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-regular fa-book"></i>
+              <h3>Si tienen material impreso o no</h3>
+            </div>
+          </span>
+                </label>
+
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Cuarta opción]" value="Facilidades de pago"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-credit-card"></i>
+              <h3>Facilidades de pago</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Cuarta opción]" value="La preparación de los maestros"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-chalkboard-user"></i>
+              <h3>La preparación de los maestros</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Cuarta opción]" value="Recomendación"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+            <i class="fa-solid fa-thumbs-up"></i>
+              <h3>Recomendación</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Cuarta opción]" value="Si usan una plataforma educativa"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-laptop"></i>
+              <h3>Si usan una plataforma educativa</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Cuarta opción]" value="El modelo de estudios"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              <h3>El modelo de estudios</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="En tu opinión, ¿cuáles de las siguientes características hacen MENOS ATRACTIVO a un curso propedéutico? Selecciona las CUATRO principales que afectarían NEGATIVAMENTE en tu elección. [Cuarta opción]"
+                           value="El tiempo que mi hijo tiene que invertir estudiando"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-clock" id="iconTiempo"></i>
+              <h3>El tiempo que mi hijo tiene que invertir estudiando</h3>
+            </div>
+          </span>
+                </label>
+
+            </div>
+
+            <a class=" btn btn-primary btn-lg"
+               style="background-color: #ff6167ff !important; border:none; margin-bottom: 30px"
+               href="javascript:scrolling('section11','section12')">Siguiente</a>
+        </section>
+
+        <section id="section12">
+            <br>
+            <img src="https://misionadmision-assets.s3.amazonaws.com/img/website/logo-misionadmision.png"
+                 style="margin-top: 250px"/>
+            <br>
+            <h4>
+                ¿Cuánto estarías dispuesto a pagar por el curso que cumpla con las características que elegiste?
+
+            </h4>
+
+            <div class="radio-buttons">
+                <label class="custom-radio">
+                    <input type="radio" name="¿Cuánto estarías dispuesto a pagar por el curso que cumpla con las características que elegiste?" value="1" required="true"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-1"></i>
+              <h3>1000 Pesos</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="¿Cuánto estarías dispuesto a pagar por el curso que cumpla con las características que elegiste?" value="2" required="true"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-2"></i>
+              <h3>2000 Pesos</h3>
+            </div>
+          </span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="¿Cuánto estarías dispuesto a pagar por el curso que cumpla con las características que elegiste?" value="3" required="true"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+             <i class="fa-solid fa-3"></i>
+              <h3>3000 Pesos</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="¿Cuánto estarías dispuesto a pagar por el curso que cumpla con las características que elegiste?" value="4" required="true"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-4"></i>
+              <h3>4000 Pesos</h3>
+            </div>
+          </span>
+                </label>
+
+
+                <label class="custom-radio">
+                    <input type="radio" name="¿Cuánto estarías dispuesto a pagar por el curso que cumpla con las características que elegiste?" value="5" required="true"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-5"></i>
+              <h3>5000 Pesos</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="¿Cuánto estarías dispuesto a pagar por el curso que cumpla con las características que elegiste?" value="6" required="true"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-6"></i>
+              <h3>6000 Pesos</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="¿Cuánto estarías dispuesto a pagar por el curso que cumpla con las características que elegiste?" value="7" required="true"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+            <i class="fa-solid fa-7"></i>
+              <h3>7000 Pesos</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="¿Cuánto estarías dispuesto a pagar por el curso que cumpla con las características que elegiste?" value="8" required="true"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-8"></i>
+              <h3>8000 Pesos</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="¿Cuánto estarías dispuesto a pagar por el curso que cumpla con las características que elegiste?" value="9" required="true"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+                <i class="fa-solid fa-9"></i>
+              <h3>9000 Pesos</h3>
+            </div>
+          </span>
+                </label>
+
+                <label class="custom-radio">
+                    <input type="radio" name="¿Cuánto estarías dispuesto a pagar por el curso que cumpla con las características que elegiste?" value="10" required="true"/>
+                    <span class="radio-btn"
+                    >
+            <div class="hobbies-icon">
+              <i class="fa-solid fa-1"></i>
+                <i class="fa-solid fa-0"></i>
+              <h3>10000 Pesos</h3>
+            </div>
+          </span>
+                </label>
+
+            </div>
+
+
+            <button class="btn-primary" type="submit" name="enviar"> Terminar encuesta</button>
+        </section>
+
+
+
 </div>
-
-
+</form>
 
 </body>
 
