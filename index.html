@@ -42,7 +42,7 @@
 
                 }
                 if (contador < 4) {
-                    alert("Contesta todas las preguntas antes de continuar")
+                    alert("no puede haber elementos vacios")
                 } else {
                     document.getElementById(idsection2).scrollIntoView()
                 }
@@ -273,6 +273,7 @@
                 <option value="Universidad Pedagógica Veracruzana">Universidad Pedagógica Veracruzana</option>
                 <option value="Universidad de Xalapa">Universidad de Xalapa</option>
                 <option value="Universidad Naval">Universidad Naval</option>
+                <option value="Benemérita Universidad Autónoma de Puebla">Benemérita Universidad Autónoma de Puebla</option>
                 <option value="Otro">Otro</option>
             </select>
             <br>
@@ -2329,13 +2330,32 @@
             </div>
 
 
-            <button class="btn-primary" type="submit" name="enviar"> Terminar encuesta</button>
+            <button class="btn btn-primary" type="submit" name="enviar"> Terminar encuesta</button>
         </section>
 
 
 
 </div>
 </form>
+
+<script>
+    window.addEventListener("load", function() {
+        const form = document.getElementById('encuesta');
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            })
+                .then(() => {
+                    window.location.replace('gracias.html');
+                })
+        });
+    });
+
+</script>
 
 </body>
 
