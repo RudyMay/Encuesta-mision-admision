@@ -27,7 +27,7 @@ section{
     scroll-snap-align: start;
 }
 
-#section7,#section8,#section9,#section10,#section11,#section12{
+#section6,#section7,#section8,#section9,#section10,#section11,#section12{
     overflow-y: scroll;
 }
 
@@ -126,7 +126,7 @@ select{
     background-color:#E561A9;
     margin: 10px;
     width: 100px;
-    height: 120px;
+    height: 130px;
     border: 3px solid transparent;
     display: inline-block;
     border-radius: 10px;
@@ -219,7 +219,9 @@ input[type="checkbox"]:checked+label div{ background:#D092F9; }
 
 /*----- MEDIA QUERYS--------*/
 @media screen and (min-width:319px ) and (max-width: 426px){
-
+#section12 img{
+    margin-top: 260px;
+}
 
     .radio-btn {
         background-color: #E561A9;
@@ -314,6 +316,93 @@ input[type="checkbox"]:checked+label div{ background:#D092F9; }
 
 }
 
+@media screen and (min-width: 1239px)  and ( max-width: 1441px){
+    #logoMa3{
+        margin-top: 450px!important;
+    }
+    #logoMa1{
+        margin-top: 420px !important;
+    }
+    .radio-btn{
+        width: 140px;
+    }
+
+    #section10 .radio-btn, #section11 .radio-btn {
+        width:115px !important; ;
+    }
+
+    #logoMa2{
+        margin-top:380px !important;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1022px){
+    textarea{
+        min-height: 100px !important;
+    }
+
+    .radio-btn {
+        background-color: #E561A9;
+        margin: 10px;
+        width: 135px;
+        height: 130px;
+        border: 3px solid transparent;
+        display: inline-block;
+        border-radius: 10px;
+        position: relative;
+        text-align: center;
+        box-shadow: 0 0 20px #c3c3c367;
+        cursor: pointer;
+    }
+    #logoMa1{
+        margin-top: 1060px !important;
+    }
+    #logoMa2, #logoMa3{
+        margin-top: 1180px !important;
+    }
+
+    #section10 .radio-btn{
+        width: 125px !important;
+    }
+
+    #section11 .radio-btn{
+        width: 125px !important;
+    }
+
+    #section12 img{
+        margin-top: 0px !important;
+    }
+
+}
+
+@media screen and (min-width: 1024px) and ( max-width: 1238px ){
+    #section7 .radio-btn{
+        width: 185px !important;
+    }
+    #section8 .radio-btn{
+        width: 185px !important;
+    }
+
+    #logoMa1{
+        margin-top: 1060px !important;
+    }
+
+    #logoMa2, #logoMa3{
+        margin-top: 1180px !important;
+    }
+
+    #section10 .radio-btn{
+        width: 150px !important;
+    }
+
+    #section11 .radio-btn{
+        width: 150px !important;
+    }
+
+    #section12 img{
+        margin-top: 0px !important;
+    }
+}
 
 
 
